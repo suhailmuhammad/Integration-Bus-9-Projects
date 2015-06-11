@@ -20,7 +20,7 @@ CREATE COMPUTE MODULE FileAggrSample_Branch_Compute
 	      END IF;
 		
 	END;
-
+/* -- Change in prod code -- 
 	CREATE PROCEDURE CopyMessageHeaders() BEGIN
 		DECLARE I INTEGER 1;
 		DECLARE J INTEGER;
@@ -30,6 +30,7 @@ CREATE COMPUTE MODULE FileAggrSample_Branch_Compute
 			SET I = I + 1;
 		END WHILE;
 	END;
+	*/ 
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot = InputRoot;
