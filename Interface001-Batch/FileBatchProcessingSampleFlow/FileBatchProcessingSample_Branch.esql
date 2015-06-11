@@ -18,7 +18,7 @@ CREATE COMPUTE MODULE FileAggrSample_Branch_Compute
 	      ELSE
 		    RETURN FALSE;
 	      END IF;
-		// Changes for release 2
+		// Changes for prod fix
 	END;
 
 	CREATE PROCEDURE CopyMessageHeaders() BEGIN
