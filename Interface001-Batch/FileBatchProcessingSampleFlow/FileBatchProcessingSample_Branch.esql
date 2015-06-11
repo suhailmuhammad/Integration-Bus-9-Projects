@@ -30,7 +30,17 @@ CREATE COMPUTE MODULE FileAggrSample_Branch_Compute
 			SET I = I + 1;
 		END WHILE;
 	END;
-
+		// chnaged for Release 2
+		CREATE PROCEDURE CopyMessageHeaders1() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+	
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot = InputRoot;
 	END;
